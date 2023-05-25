@@ -1,0 +1,12 @@
+cloud:
+  aws:
+    region:
+      static: ap-south-1
+      auto: false
+    stack:
+      auto: false
+    credentials:
+      access-key: AKIAWSF3PK6GBKDG74M7
+      secret-key: 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
+    end-point:
+      uri: https://sqs.ap-south-1.amazonaws.com/451364738956/helpcorner-queue

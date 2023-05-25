@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "43294810938",
+    "project_id": "helpcorner-new",
+    "storage_bucket": "helpcorner-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43294810938:android:04642764bf64d38f26a603",
+        "android_client_info": {
+          "package_name": "com.flutterflow.helpcorner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43294810938-17a4hnipg14sipsebm4mtg68582ensnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo_nzVYhpLQ5z7HB_gygHQgs_uY7yKipM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43294810938-17a4hnipg14sipsebm4mtg68582ensnr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "43294810938-jnl41jqcf0abfgtfopbejr8ovbihjgf6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.helpcorner"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

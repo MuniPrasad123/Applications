@@ -1,0 +1,508 @@
+{
+	"info": {
+		"_postman_id": "4a6fd238-bc8f-469d-a231-e099984f6602",
+		"name": "helpcorner_new",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "local",
+			"item": [
+				{
+					"name": "createUsers - local",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"userType\":\"donar\",\r\n\"name\":\"sunitha\",\r\n\"location\":\"kolathur\",\r\n\"phone\":\"978987668\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:7000/api/helpcorner/createUser",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendMessageToDonar-local",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"userType\":\"donar\",\r\n\"name\":\"baasha\",\r\n\"location\":\"kolathur\",\r\n\"phone\":\"+919790660204\",\r\n\"qty\" : \"10\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:7000/api/helpcorner/sendMessageToDonar",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"sendMessageToDonar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendMessageToDistributor",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"userType\":\"donar\",\r\n\"name\":\"muniprasad\",\r\n\"location\":\"puzhal\",\r\n\"phone\":\"919790660204\",\r\n\"qty\" : \"10\",\r\n\"address\" : \"Food Provider, 2nd street , perambur , chennai - 600012.\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:7000/api/helpcorner/sendMessageToDistributor",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"sendMessageToDistributor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendPushNotification",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"userType\":\"donar\",\r\n\"name\":\"sunitha\",\r\n\"location\":\"kolathur\",\r\n\"phone\":\"978987668\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:7000/api/helpcorner/createUser",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchUserByName - local",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/helpcorner/fetchUserByPhone?location=chennai&userType=distributor&phone=919790660204",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"fetchUserByPhone"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "chennai"
+								},
+								{
+									"key": "userType",
+									"value": "distributor"
+								},
+								{
+									"key": "phone",
+									"value": "919790660204"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchUserByType_1 - local",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:7000/api/helpcorner/fetchUserByType?location=kolathur&userType=donar",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"fetchUserByType"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "kolathur"
+								},
+								{
+									"key": "userType",
+									"value": "donar"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendSQSMessage -  local",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/send/iotMessage/helloatlanwa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"send",
+								"iotMessage",
+								"helloatlanwa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "iotmessage - local",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"locationId\":\"163\",\r\n\"latitude\":\"13.1077° N\",\r\n\"longitude\":\"80.2444° E\",\r\n\"location\":\"puzhal\",\r\n\"nextAction\":\"distributor\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:7000/api/send/iotMessage/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"send",
+								"iotMessage",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "aws",
+			"item": [
+				{
+					"name": "createUsers - aws",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"userType\":\"donar\",\r\n\"name\":\"muni Prasad-donar\",\r\n\"location\":\"kolathur\",\r\n\"phone\":\"919790660204\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://3.108.216.156:7000/api/helpcorner/createUser",
+							"protocol": "http",
+							"host": [
+								"3",
+								"108",
+								"216",
+								"156"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchUserByType_1 - aws",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.108.216.156:7000/api/helpcorner/fetchUserByType?location=ramnad&userType=distributor",
+							"protocol": "http",
+							"host": [
+								"3",
+								"108",
+								"216",
+								"156"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"fetchUserByType"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "ramnad"
+								},
+								{
+									"key": "userType",
+									"value": "distributor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "iotmessage - aws",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"locationId\":\"163\",\r\n\"latitude\":\"13.1077° N\",\r\n\"longitude\":\"80.2444° E\",\r\n\"location\":\"puzhal\",\r\n\"nextAction\":\"distributor\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://3.108.216.156:7000/api/send/iotMessage/",
+							"protocol": "http",
+							"host": [
+								"3",
+								"108",
+								"216",
+								"156"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"send",
+								"iotMessage",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchUserByPhone-aws",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.108.216.156:7000/api/helpcorner/fetchUserByPhone?location=perambur&phone=919790660204&userType=distributor",
+							"protocol": "http",
+							"host": [
+								"3",
+								"108",
+								"216",
+								"156"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"fetchUserByPhone"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "perambur"
+								},
+								{
+									"key": "phone",
+									"value": "919790660204"
+								},
+								{
+									"key": "userType",
+									"value": "distributor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aws-sendMessageToDonar",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"userType\":\"donar\",\r\n\"location\":\"perambur\",\r\n\"phone\":\"+919790660204\",\r\n\"qty\" : \"7\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://3.108.216.156:7000/api/helpcorner/sendMessageToDonar",
+							"protocol": "http",
+							"host": [
+								"3",
+								"108",
+								"216",
+								"156"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"sendMessageToDonar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchUserByName - aws",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/helpcorner/fetchUserByName?location=perambur&userType=donar&name=spiderman",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"helpcorner",
+								"fetchUserByName"
+							],
+							"query": [
+								{
+									"key": "location",
+									"value": "perambur"
+								},
+								{
+									"key": "userType",
+									"value": "donar"
+								},
+								{
+									"key": "name",
+									"value": "spiderman"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
